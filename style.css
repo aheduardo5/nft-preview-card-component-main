@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyanbox: hsla(178, 100%, 50%, 0.5);
+
+  /* ### Neutral */
+
+  --VerydarkblueMain: hsl(217, 54%, 11%); /*(main BG)*/
+  --VerydarkblueCard: hsl(216, 50%, 16%); /*(card BG)*/
+  --VerydarkblueLine: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--VerydarkblueMain);
+}
+
+.main-container{
+    width: 300px;
+    height: 546px;
+    margin: 60px auto;
+    border-radius: 16px;
+    padding: 26px;
+    background-color: var(--VerydarkblueCard);
+}
+
+
+
+.image{
+    margin: 0 auto;
+    background-image: url(images/image-equilibrium.jpg);
+    background-size: cover;
+    width: 280;
+    height: 280px;
+    border-radius: 8px;
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+.eye-image{
+    background-color: var(--Cyanbox);
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 280px;
+    opacity: 0;
+}
+.eye-image:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: 300ms;
+}
+h1{
+    color: var(--White);
+    font-size: 1.3em;
+    margin-bottom: 18px;
+}
+.description{
+    font-size: 0.9em;
+    color: var(--Softblue);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.details-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: .9em;
+}
+.details-container .value{
+    color: var(--Cyan);
+}
+
+.details-container .time{
+    color: var(--Softblue);;
+}
+.line{
+    border-top: 1px solid var(--Softblue);
+    margin-bottom: 20px;
+}
+.creator-container{
+    display: flex;
+    align-items: center;
+}
+.photo img{
+    width: 36px;
+    height: 36px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+.creator-container{
+    font-size: .85em;
+}
+.creator-container p{
+    color: var(--Softblue);
+    margin-left: 15px;
+}
+.creator-container span{
+    color: var(--White);
+}
+.creator-container span:hover,
+.title.title:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* FOOTER */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--White);
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
+
+@media (min-width:994px){
+    .main-container{
+        width: 354px;
+        height: 600px;
+    }
+    .image{
+        width: 100%;
+        height: 300px;
+    }
+    .eye-image {
+        height: 300px;
+    }
+    .description{
+        font-size: 1em;
+    }
+}
